@@ -1,0 +1,162 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|c:\\users\\student\\downloads\\it_elective_2_midterm_q2_albano_raven\\playlistapp\\playlistapp\\views\\playlist\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|solutionrelative:playlistapp\\views\\playlist\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|c:\\users\\student\\downloads\\it_elective_2_midterm_q2_albano_raven\\playlistapp\\playlistapp\\views\\playlist\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|solutionrelative:playlistapp\\views\\playlist\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|c:\\users\\student\\downloads\\it_elective_2_midterm_q2_albano_raven\\playlistapp\\playlistapp\\models\\entities\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|solutionrelative:playlistapp\\models\\entities\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|c:\\users\\student\\downloads\\it_elective_2_midterm_q2_albano_raven\\playlistapp\\playlistapp\\data\\mockdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|solutionrelative:playlistapp\\data\\mockdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|c:\\users\\student\\downloads\\it_elective_2_midterm_q2_albano_raven\\playlistapp\\playlistapp\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|solutionrelative:playlistapp\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|c:\\users\\student\\downloads\\it_elective_2_midterm_q2_albano_raven\\playlistapp\\playlistapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3461C303-5175-E48D-5784-7955908CBBB8}|PlaylistApp\\PlaylistApp.csproj|solutionrelative:playlistapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Views\\Playlist\\Create.cshtml",
+              "RelativeDocumentMoniker": "PlaylistApp\\Views\\Playlist\\Create.cshtml",
+              "ToolTip": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Views\\Playlist\\Create.cshtml",
+              "RelativeToolTip": "PlaylistApp\\Views\\Playlist\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-01T03:04:07.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Views\\Playlist\\Index.cshtml",
+              "RelativeDocumentMoniker": "PlaylistApp\\Views\\Playlist\\Index.cshtml",
+              "ToolTip": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Views\\Playlist\\Index.cshtml",
+              "RelativeToolTip": "PlaylistApp\\Views\\Playlist\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-01T02:57:30.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Playlist.cs",
+              "DocumentMoniker": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Models\\Entities\\Playlist.cs",
+              "RelativeDocumentMoniker": "PlaylistApp\\Models\\Entities\\Playlist.cs",
+              "ToolTip": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Models\\Entities\\Playlist.cs",
+              "RelativeToolTip": "PlaylistApp\\Models\\Entities\\Playlist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T02:51:33.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MockDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Data\\MockDatabase.cs",
+              "RelativeDocumentMoniker": "PlaylistApp\\Data\\MockDatabase.cs",
+              "ToolTip": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Data\\MockDatabase.cs",
+              "RelativeToolTip": "PlaylistApp\\Data\\MockDatabase.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T02:48:43.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "PlaylistApp\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "PlaylistApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-08-01T02:38:50.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "PlaylistApp\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\STUDENT\\Downloads\\IT_ELECTIVE_2_MIDTERM_Q2_Albano_Raven\\PlaylistApp\\PlaylistApp\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "PlaylistApp\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-01T02:37:55.369Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
