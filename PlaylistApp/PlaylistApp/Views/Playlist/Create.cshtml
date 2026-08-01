@@ -1,81 +1,232 @@
 ﻿@model PlaylistApp.Models.DTOs.CreatePlaylistDto
 
-<div style="background-color: #0f172a; min-height: 100vh; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; margin-top: -1.5rem; margin-bottom: -1.5rem;" class="py-5">
-    <div class="container" style="max-width: 700px;">
-        <div class="card border-0 shadow-lg" style="background-color: #1e293b; border-radius: 16px;">
+<style>
 
-            <div class="card-header border-bottom border-secondary border-opacity-25 bg-transparent p-4 d-flex justify-content-between align-items-center">
-                <div>
-                    <h4 class="fw-bold text-white mb-0" style="letter-spacing: -0.5px;">Create New Playlist</h4>
-                    <p class="text-secondary small mb-0">Add tracks and organize your mix</p>
+    .bg-glow-top {
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        border-radius: 50%;
+        top: 0;
+        right: 10%;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+ 
+    .glass-card {
+        position: relative;
+        z-index: 1;
+        background: rgba(30, 41, 59, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .track-card {
+        background: rgba(15, 23, 42, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        transition: all 0.25s ease;
+    }
+
+        .track-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(99, 102, 241, 0.1);
+        }
+
+    .input-group-text {
+        background-color: rgba(51, 65, 85, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-right: none;
+        color: #94a3b8;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transition: all 0.2s ease;
+    }
+
+    .custom-input {
+        background-color: rgba(51, 65, 85, 0.6) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-left: none !important;
+        color: #f8fafc !important;
+        border-top-right-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+        padding: 0.65rem 1rem;
+        transition: all 0.2s ease;
+    }
+
+        .custom-input::placeholder {
+            color: #64748b;
+        }
+
+    .input-group:focus-within .input-group-text {
+        border-color: #6366f1 !important;
+        color: #818cf8;
+        background-color: rgba(51, 65, 85, 0.9);
+    }
+
+    .input-group:focus-within .custom-input {
+        border-color: #6366f1 !important;
+        box-shadow: none !important;
+        background-color: rgba(51, 65, 85, 0.9) !important;
+    }
+
+    .btn-gradient {
+        background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        color: #ffffff;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+        transition: all 0.25s ease;
+    }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+            color: #ffffff;
+        }
+
+        .btn-gradient:active {
+            transform: translateY(0);
+        }
+
+    .btn-add-track {
+        background-color: rgba(99, 102, 241, 0.08);
+        border: 1.5px dashed rgba(99, 102, 241, 0.4);
+        color: #818cf8;
+        border-radius: 14px;
+        font-weight: 600;
+        transition: all 0.25s ease;
+    }
+
+        .btn-add-track:hover {
+            background-color: rgba(99, 102, 241, 0.18);
+            border-color: #6366f1;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+</style>
+
+<div class="container py-5 position-relative">
+    <div class="bg-glow-top"></div>
+
+    <form id="createPlaylistForm" method="post" asp-action="Save" class="position-relative z-1">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 pb-4 mb-4 border-bottom border-secondary border-opacity-25">
+            <div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="badge bg-indigo bg-opacity-10 text-indigo border border-indigo border-opacity-25 px-2 py-1 small" style="color: #818cf8; background-color: rgba(99, 102, 241, 0.1);">Collection Editor</span>
                 </div>
-                <a asp-action="Index" class="btn btn-outline-secondary text-light btn-sm px-3" style="border-radius: 8px;">Cancel</a>
+                <h2 class="fw-bold text-white mb-0" style="letter-spacing: -0.5px;">Create New Playlist</h2>
             </div>
+            <a asp-action="Index" class="btn btn-outline-secondary text-light px-4 py-2 d-flex align-items-center gap-2" style="border-radius: 10px;">
+                <i class="bi bi-x-lg"></i> Cancel
+            </a>
+        </div>
 
-            <div class="card-body p-4 p-sm-5">
-                <form method="post">
+        <div class="row g-4">
+
+            <div class="col-12 col-lg-4">
+                <div class="card glass-card p-4 sticky-top" style="top: 20px;">
+                    <div class="mb-4 text-center text-sm-start">
+                        <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-3 mb-3" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">
+                            <i class="bi bi-disc fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold text-white mb-1">Playlist Details</h5>
+                        <p class="text-secondary small mb-0">Give your collection a memorable title.</p>
+                    </div>
 
                     <div class="mb-4">
                         <label asp-for="Title" class="form-label text-secondary small fw-semibold">Playlist Title</label>
-                        <input asp-for="Title" class="form-control border-0 py-2 px-3" style="background-color: #334155; color: #f8fafc; border-radius: 8px;" placeholder="e.g. OPM Chill Hits" />
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-music-note"></i></span>
+                            <input asp-for="Title" class="form-control custom-input" placeholder="e.g. Chill OPM Vibes" />
+                        </div>
                         <span asp-validation-for="Title" class="text-danger small mt-1 d-block"></span>
                     </div>
 
-                    <h5 class="fw-semibold text-white mt-4 mb-3" style="letter-spacing: -0.3px;">Track List (YouTube Links)</h5>
+                    <hr class="border-secondary border-opacity-25 mb-4" />
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-gradient py-3 d-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-check-circle-fill"></i> Save Playlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-8">
+                <div class="card glass-card p-4 p-sm-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-secondary border-opacity-25">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-collection-play text-indigo fs-5" style="color: #818cf8;"></i>
+                            <h5 class="fw-bold text-white mb-0" style="letter-spacing: -0.3px;">Track List</h5>
+                        </div>
+                        <span class="badge bg-dark bg-opacity-50 text-indigo border border-secondary border-opacity-25 px-3 py-2" style="border-radius: 20px; color: #818cf8;">
+                            @Model.Videos.Count Track(s)
+                        </span>
+                    </div>
 
                     @for (int i = 0; i < Model.Videos.Count; i++)
                     {
-                        <div class="card mb-3 border-0" style="background-color: #0f172a; border-radius: 12px;">
-                            <div class="card-body p-3">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <span class="badge bg-dark bg-opacity-50 text-indigo border border-secondary border-opacity-25 px-3 py-2" style="border-radius: 8px; color: #818cf8;">
-                                        Track #@(i + 1)
+                        <div class="card track-card mb-3 p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-dark bg-opacity-70 border border-secondary border-opacity-25 px-3 py-1.5" style="border-radius: 8px; color: #818cf8;">
+                                        <i class="bi bi-hash me-1"></i>Track @(i + 1)
                                     </span>
-                                    @if (Model.Videos.Count > 1)
-                                    {
-                                        <button type="submit"
-                                                asp-action="RemoveVideoRow"
-                                                asp-route-index="@i"
-                                                formnovalidate
-                                                class="btn btn-outline-danger btn-sm px-2 py-1"
-                                                style="border-radius: 6px; font-size: 0.8rem;">
-                                            Remove
-                                        </button>
-                                    }
                                 </div>
-                                <div class="mb-2">
-                                    <input name="Videos[@i].YouTubeUrl"
-                                           value="@Model.Videos[i].YouTubeUrl"
-                                           class="form-control border-0 py-2 px-3"
-                                           style="background-color: #334155; color: #f8fafc; border-radius: 8px;"
-                                           placeholder="YouTube URL" />
+                                @if (Model.Videos.Count > 1)
+                                {
+                                    <button type="submit"
+                                            asp-action="RemoveVideoRow"
+                                            asp-route-index="@i"
+                                            formnovalidate
+                                            class="btn btn-outline-danger btn-sm px-3 py-1 d-flex align-items-center gap-1"
+                                            style="border-radius: 8px; font-size: 0.8rem;">
+                                        <i class="bi bi-trash3"></i> Remove
+                                    </button>
+                                }
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-secondary small">YouTube Link</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-youtube text-danger"></i></span>
+                                    <input asp-for="Videos[i].YouTubeUrl"
+                                           class="form-control custom-input"
+                                           placeholder="https://www.youtube.com/watch?v=..." />
                                 </div>
-                                <div>
-                                    <input name="Videos[@i].TrackNote"
-                                           value="@Model.Videos[i].TrackNote"
-                                           class="form-control border-0 py-2 px-3"
-                                           style="background-color: #334155; color: #f8fafc; border-radius: 8px;"
-                                           placeholder="Track Note" />
+                                <span asp-validation-for="Videos[i].YouTubeUrl" class="text-danger small mt-1 d-block"></span>
+                            </div>
+
+                            <div>
+                                <label class="form-label text-secondary small">Track Note</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                                    <input asp-for="Videos[i].TrackNote"
+                                           class="form-control custom-input"
+                                           placeholder="Personal notes (e.g. Favorite acoustic version)" />
                                 </div>
                             </div>
                         </div>
                     }
 
-                    <div class="mb-4">
-                        <button type="submit" asp-action="AddVideoRow" formnovalidate class="btn w-100 fw-semibold text-white py-2" style="background-color: rgba(99, 102, 241, 0.15); border: 1px dashed #6366f1; color: #818cf8; border-radius: 8px;">
-                            + Add Another Track
-                        </button>
-                    </div>
-
-                    <hr class="border-secondary border-opacity-25 my-4" />
-
-                    <div class="d-grid">
-                        <button type="submit" asp-action="Save" class="btn text-white fw-semibold py-2" style="background-color: #6366f1; border-radius: 8px; transition: all 0.2s ease;">
-                            Save Complete Playlist
-                        </button>
-                    </div>
-                </form>
+                    <button type="submit"
+                            asp-action="AddVideoRow"
+                            asp-route-count="@Model.Videos.Count"
+                            formnovalidate
+                            class="btn btn-add-track w-100 py-3 mt-2 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-plus-circle-fill"></i> Add Another Track
+                    </button>
+                </div>
             </div>
+
         </div>
-    </div>
+    </form>
 </div>

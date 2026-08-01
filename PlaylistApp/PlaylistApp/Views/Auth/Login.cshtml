@@ -1,43 +1,176 @@
-﻿@model PlaylistApp.Models.DTOs.LoginDto
+﻿@{
+    Layout = null;
+}
+@model PlaylistApp.Models.DTOs.LoginDto
 
-<div class="d-flex align-items-center justify-content-center min-vh-100 py-5"
-     style="background: #0f172a; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; margin-top: -1.5rem;">
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - PlaylistApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <div class="card border-0 shadow-lg" style="width: 100%; max-width: 420px; background-color: #1e293b; border-radius: 16px;">
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f8fafc;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .glass-card {
+            position: relative;
+            z-index: 1;
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .glass-card:hover {
+                border-color: rgba(99, 102, 241, 0.3) !important;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(99, 102, 241, 0.15);
+            }
+
+        .input-group-text {
+            background-color: rgba(51, 65, 85, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-right: none;
+            color: #94a3b8;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .custom-input {
+            background-color: rgba(51, 65, 85, 0.6) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-left: none !important;
+            color: #f8fafc !important;
+            border-top-right-radius: 12px !important;
+            border-bottom-right-radius: 12px !important;
+            padding: 0.65rem 1rem;
+            transition: all 0.2s ease;
+        }
+
+            .custom-input::placeholder {
+                color: #64748b;
+            }
+
+        .input-group:focus-within .input-group-text {
+            border-color: #6366f1 !important;
+            color: #818cf8;
+            background-color: rgba(51, 65, 85, 0.9);
+        }
+
+        .input-group:focus-within .custom-input {
+            border-color: #6366f1 !important;
+            box-shadow: none !important;
+            background-color: rgba(51, 65, 85, 0.9) !important;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            padding: 0.75rem;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+            transition: all 0.25 ease;
+        }
+
+            .btn-gradient:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+                color: #ffffff;
+            }
+
+            .btn-gradient:active {
+                transform: translateY(0);
+            }
+
+
+        .hint-badge {
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            padding: 8px 16px;
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100 py-5">
+
+    <div class="bg-glow"></div>
+
+    <div class="card glass-card border-0" style="width: 100%; max-width: 420px;">
         <div class="card-body p-4 p-sm-5">
 
             <div class="text-center mb-4">
+                <div class="d-inline-flex align-items-center justify-content-center p-3 rounded-circle mb-3" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">
+                    <i class="bi bi-music-note-list fs-3"></i>
+                </div>
                 <h3 class="fw-bold text-white mb-1" style="letter-spacing: -0.5px;">Welcome Back</h3>
-                <p class="text-secondary small mb-0">Sign in to manage your playlist</p>
+                <p class="text-secondary small mb-0">Sign in to manage your music collection</p>
             </div>
 
-            <div asp-validation-summary="ModelOnly" class="alert alert-danger border-0 small py-2 px-3 mb-4" style="background-color: rgba(239, 68, 68, 0.1); color: #fca5a5;"></div>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger border-0 small py-2 px-3 mb-4" style="background-color: rgba(239, 68, 68, 0.15); color: #fca5a5; border-radius: 10px;"></div>
 
             <form asp-action="Login" method="post">
+
                 <div class="mb-3">
                     <label class="form-label text-secondary small fw-semibold">Username</label>
-                    <input asp-for="Username" class="form-control border-0 py-2 px-3" style="background-color: #334155; color: #f8fafc; border-radius: 8px;" placeholder="Enter username" />
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                        <input asp-for="Username" class="form-control custom-input" placeholder="Enter username" />
+                    </div>
                     <span asp-validation-for="Username" class="text-danger small mt-1 d-block"></span>
                 </div>
 
                 <div class="mb-4">
                     <label class="form-label text-secondary small fw-semibold">Password</label>
-                    <input asp-for="Password" type="password" class="form-control border-0 py-2 px-3" style="background-color: #334155; color: #f8fafc; border-radius: 8px;" placeholder="••••••••" />
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input asp-for="Password" type="password" class="form-control custom-input" placeholder="••••••••" />
+                    </div>
                     <span asp-validation-for="Password" class="text-danger small mt-1 d-block"></span>
                 </div>
 
-                <div class="d-grid pt-2">
-                    <button type="submit" class="btn text-white fw-semibold py-2" style="background-color: #6366f1; border-radius: 8px; transition: all 0.2s ease;">
-                        Sign In
+                <div class="d-grid pt-1">
+                    <button type="submit" class="btn btn-gradient d-flex align-items-center justify-content-center gap-2">
+                        Sign In <i class="bi bi-arrow-right fs-6"></i>
                     </button>
                 </div>
             </form>
 
             <div class="text-center mt-4 pt-3 border-top border-secondary border-opacity-25">
-                <span class="badge bg-dark bg-opacity-50 text-secondary fw-normal py-2 px-3" style="border-radius: 20px;">
-                    <i class="bi bi-info-circle me-1"></i> Hint: <span class="text-light">admin</span> / <span class="text-light">password123</span>
-                </span>
+                <div class="hint-badge d-inline-block text-secondary small">
+                    <i class="bi bi-key-fill text-indigo me-1" style="color: #818cf8;"></i> Demo: <code class="text-light bg-transparent p-0">admin</code> / <code class="text-light bg-transparent p-0">password123</code>
+                </div>
             </div>
+
         </div>
     </div>
-</div>
+
+</body>
+</html>
